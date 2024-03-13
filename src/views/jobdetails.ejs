@@ -1,0 +1,135 @@
+<div class=" mt-1 mb-3">
+    <div class="jd-outer position-reletive">
+        <div class="img-cont">
+            <img src="../bckdrp.webp" alt="" class="backdrop-img">
+        </div>
+        <h1 class="text-center"><span class="text-danger">
+                <%=job.jobDesignation%>
+            </span> <span class="text-success">oppertunity in location at </span> <span class="text-info">
+                <%=job.companyName%>
+            </span></h1>
+        <div class="position-relative">
+            <div class="p-2">
+                <span class="jc-b p-2 ms-2">Actively Hiring
+                    <i class="fa-solid fa-chart-line" style="color: #07eda8;"></i>
+                </span>
+                <div class="curd d-inline-block ms-3">
+                    <button class="btn">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="fa-solid fa-trash" style="color: #e52d1f;"></i>
+                    </button>
+                </div>
+                <div>
+                    <div class="m-3">
+                        <h5>
+                            <%=job.companyName%>
+                        </h5>
+                        <h6>
+                            <%=job.jobCategory%><span class="text-success">
+                                    <%=job.jobDesignation%>
+                                </span>
+                        </h6>
+                    </div>
+                    <div class="ms-4">
+                        <span class=""><i class="fa-solid fa-location-dot fa-xs" style="color: #000000;"></i>
+                            <%=job.jobLocation%>
+                        </span>
+                        <br>
+                        <span><i class="fa-solid fa-indian-rupee-sign fa-xs" style="color: #000000;"></i>
+                            <%=job.salary%>LPA
+                        </span>
+                        <br>
+                        <span><i class="fa-regular fa-hourglass fa-xs" style="color: #000000;"></i>Apply By
+                            <%=job.applyBy%></span>
+                        <br>
+                        <span>
+                            <i class="fa-solid fa-signal fa-xs" style="color: #000000;"></i>
+                            No. of Openings <%=job.openings%>
+                        </span>
+                        <br>
+                        <span class="" style="color:red;">
+                            <i class="fa-solid fa-users fa-xs" style="color: #f00000;"></i>
+                            <a href="<%=job.id%>/applicants" style="text-decoration:none; color: red;">Applicants
+                                <%=job.applicants.length%></a>
+                        </span>
+                        <br>
+                        <span class="ms-3 mt-1 mb small">
+                            <%job.skillsRequired.forEach((skill)=>{%>
+                                <button type="button" class="btn btn-outline-info btn-sm">
+                                    <%=skill%>
+                                </button>
+                                <%})%>
+
+                        </span>
+                        <br>
+                        <div class="mt-2">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#apply-now-modal"
+                                class="btn btn-primary ms-2 px-5">Apply Now</button>
+                        </div>
+                        <div class="modal fade" id="apply-now-modal" tabindex="-1" aria-labelledby="apply-now-modal"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title text-success fs-5" id="exampleModalLabel">easily</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="applicant-form">
+                                            <div class="">
+                                                <form action="/job/<%=job.id%>" class="user-access-form p-2" method="post">
+                                                    <legend class="text-center mt-2 mb-4">apply in less than 1 minute
+                                                    </legend>
+                                                    <div class="input-group input-group-sm mb-3 px-4">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm">
+                                                            Name
+                                                        </span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="enter your name" name="name">
+                                                    </div>
+                                                    <div class="input-group input-group-sm mb-3 px-4">
+                                                        <span class="input-group-text">
+                                                            Email
+                                                        </span>
+                                                        <input type="email" class="form-control"
+                                                            placeholder="enter your email" name="password">
+                                                    </div>
+                                                    <div class="input-group input-group-sm mb-3 px-4">
+                                                        <span class="input-group-text">
+                                                            Contact
+                                                        </span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="+91 _ _ _ _ _ _ _ _ _ _" name="contact">
+                                                    </div>
+                                                    <div class="text-center d-grid mx-4 mb-3">
+                                                        <button class="btn btn-success" type="submit">submit</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-success text-white border-opacity-50 rounded border p-1 mt-2 small"
+                            style="width:160px;">
+                            Posted:<%=job.jobPosted%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

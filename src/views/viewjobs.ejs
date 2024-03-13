@@ -1,0 +1,38 @@
+<div class="container-fluid d-flex pt-4 justify-content-around">
+
+<%jobs.forEach((job)=>{%>
+    <div class="job-card d-block text-white p-2">
+        <div class="jctd p-2 text-center">
+            <span>Actively Hiring</span>
+            <i class="fa-solid fa-chart-line" style="color: #07eda8;"></i>
+        </div>
+        <h5 class="pt-2 ps-2 company-name"><%=job.companyName%></h5>
+        <div class="ps-2">
+            <span><%=job.jobCategory%></span>
+            <span class="job-profile"><%=job.jobDesignation%></span>
+        </div>
+        <div class="pt-3">
+            <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+            <span><%=job.jobLocation%></span>
+        </div>
+        <div class="pt-2 ps-2">
+            <span>
+                <i class="fa-solid fa-indian-rupee-sign" style="color: #ffffff;"></i>
+                <%=job.salary%>
+            </span>
+            <span>LPA</span>
+        </div>
+        <!-- <div class="p-2 skills container-fluid d-inline-block"> -->
+            <div class="container-fluid p-2">
+            <%job.skillsRequired.forEach((skill)=>{%>
+                <button class="btn btn-outline-info btn-sm"><%=skill%></button>
+                <%})%>
+        </div>
+        <div class=" d-grid pb-2">
+            <a class="btn btn-outline-success" href="/job/<%=job.id%>">View Details</a>
+        </div>
+    </div>
+
+<%})%>
+
+</div>

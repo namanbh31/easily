@@ -1,0 +1,95 @@
+:root{
+    --background_light:#201140;
+    --background:#381E71;
+    --background:#0C1027;
+    --button_color_one:#F647FF;
+    --button_color_one_hover:#F30AFF;
+}
+body{
+    position: relative;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif ;
+  font-optical-sizing: auto ;
+  font-weight: 100 ;
+  font-style: normal ;
+}
+.body-background{
+    background-color:var(--background) !important;
+}
+nav{
+    background-color: var(--background_light)!important;
+}
+.letter{
+    margin: -0.3% !important;
+    padding: 0 !important;
+}
+.user-access-form-div-outer{
+    position: relative;
+    /* height: 40vh; */
+    width:100vh;
+    margin:10vh auto;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+    border-top: 6px solid black;
+    border-left: 4px solid black;
+    border-radius: 10px;
+}
+.applicant-form{
+    position: relative;
+    /* height: 40vh; */
+    width:50vh;
+    margin:10vh auto;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+    border-top: 6px solid black;
+    border-left: 4px solid black;
+    border-radius: 10px;
+}
+.lw{
+    width: 115vh;
+}
+.bg-pink{
+    background-color: var(--button_color_one) !important;
+    color: white !important;
+}
+.bg-pink:hover{
+    background-color: var(--button_color_one_hover)!important;
+}
+#info-div{
+    position: absolute !important;
+    left: 4%!important;
+    top:36vh;
+}
+.job-card{
+    width: 40vh;
+    border:1px goldenrod solid;
+    border-radius: 9px;
+}
+.jctd{
+    color: white!important;
+    border: 1px blueviolet solid;
+    border-radius: 20px;
+}
+
+.job-profile{
+    color:#73C2BE!important;
+}
+.company-name{
+    color: #B3D89C;
+}
+.jd-outer{
+    border: 1px solid gray;
+    margin: 0 30vh 0 30vh;
+    overflow: hidden;
+}
+
+.img-cont img{
+    top: -20%;
+    height: 100%;
+    width: 100%;
+}
+.jc-b{
+    background-color: goldenrod;
+    max-width: 25vh;
+    border-radius: 5px;
+}
