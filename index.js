@@ -27,7 +27,5 @@ server.post('/postjob', formController.jobData)
 server.get('/jobs', jobController.getAllJobs);
 server.get('/job/:id/applicants', applicantController.getApplicants);
 server.post('/job/:id', formController.applyJob);
-server.listen('3000',()=>{
-    console.log('server listening at port 3000');
-});
-// export default server;
+
+export default server;
